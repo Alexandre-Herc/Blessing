@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlessingCare- Escala</title>
+    <link rel="stylesheet" href="make.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+
+    <!--sheetjs-->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>BlessingCare - Escala</h1>
+    </header>
+
+    <section class="container">
+
+    <div class="tbox">
+        <h2>Cliente</h2>
+        <input type="text" id="nomeCliente" placeholder="Nome do cliente">
+    </div>
+
+    <div class="tbox">
+        <h2>Colaboradores</h2>
+        <input type="text" id="nomeColaborador" placeholder="Nome">
+        <button onclick="addColaborador()">Adicionar</button>
+
+        <ul id="listaColaborador"></ul>
+    </div>
+
+    <div class="tbox">
+        <h2>Período</h2>
+        <label>Mês: </label>
+        <select id="mes"></select>
+
+        <label>Ano: </label>
+        <input type="number" id="ano" value="2026">
+    </div>
+
+    <div class="tbox">
+        <h2>Escala anterior (Excel)</h2>
+        <input type="file" id="escalaArquivo" accept=".xlsx">
+    </div>
+
+    <button class="gerar" onclick="gerar()">Gerar Escala</button>
+    <button class="exportar" onclick="exportar()">Exportar para Excel</button>
+
+    </section>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Dia</th>
+                <th>Colaboradores</th>
+                <th>Mês</th>
+                <th>Escala de 24hrs</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaEscala"></tbody>
+    </table>
+
+    <div id="area-pdf">
+        <h2>Escala de Trabalho</h2>
+
+        <table id="tabelaPdf">
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Colaboradores</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <button onclick="exportarPdf()">PDF</button>
+
+    <script src="arte.js"></script>
+
+    <footer>
+        <p>Desenvolvido por BlessingCare ♥</p>
+    </footer>
+</body>
+
+</html>

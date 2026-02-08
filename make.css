@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+  background: #f5f7fa;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Section boxes */
+.tbox {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tbox h2 {
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+/* Inputs e selects */
+.tbox input[type="text"],
+.tbox input[type="number"],
+.tbox select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Botões */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Lista de colaboradores */
+#listaColaborador {
+  list-style: none;
+  padding-left: 0;
+}
+
+#listaColaborador li {
+  padding: 8px 10px;
+  background: #ecf0f1;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+/* Tabela */
+table {
+  width: 80%;
+  margin:20px auto;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding:6px 8px;
+  text-align: center;
+}
+
+thead th {
+  background-color: #2c3e50;
+  color:#fff;
+}
+
+tbody tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.fim-semana {
+  background-color: #ffecec;
+  font-weight: bold;
+}
+
+.btn-pequeno {
+  font-size: 11px;
+  padding:2px 6px;
+  margin-left: 4px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #7f8c8d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  table, th, td {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .tbox input, .tbox select {
+    font-size: 0.9rem;
+  }
+}
+
+#area-pdf {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+.btn-pequeno {
+  font-size: 0.75rem; /* menor que o padrão */
+  padding: 2px 6px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-pequeno:hover {
+  background-color: #ddd;
+}
