@@ -43,4 +43,5 @@ O sistema permite cadastrar colaboradores, gerar escalas automáticas em rodízi
 - O projeto funciona totalmente no navegador, sem necessidade de backend
 - Ideal para pequenas equipes e uso administrativo
 - Projeto com fins educacionais e de portfólio
-  
+
+https://alexandre-herc.github.io/Blessing/
